@@ -1,27 +1,37 @@
 import axios from "axios";
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { YOUTUBE_API_KEY } from "../API_KEY";
+import Header from "../components/Header";
+import SideBar from "../components/SideBar";
+import PageContents from "../components/PageContents";
 
 function Home(){
     // var gapi = require('gapi');
     // gapi.server.setApiKey(YOUTUBE_API_KEY);
     // gapi.server.load();
-    // const URL = `https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,statistics&forUsername=Apple&key=${YOUTUBE_API_KEY}`;
-
+    const youtubeChannelId = 'beyonce';
+    const URL = `https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=${youtubeChannelId}&key=${YOUTUBE_API_KEY}`;
+    const [youtubeChannelViewCount, setYoutubeChannelViewCount] = useState({});
+    const [youtubeData, setYoutubeData] = useState({});
     // useEffect(() => {
     //     axios
     //         .get(URL)
-    //         .then((response) => {
-    //             console.log({response});
+    //         .then( function(response) {
+    //             console.log(response);
+    //             setYoutubeData(response.data);
     //         })
-    //         .catch((error) => {
-    //             console.log({error})
-    //         });
+    //         .catch(function(error){
+    //             console.warn(error);
+    //             setYoutubeData({});
+    //         })
     // }, []);
-    
     return (
         <div>
-            <p>gaslight from home</p>
+            <Header />
+            <div className="page-info-wrapper">
+                <SideBar />
+                <PageContents />
+            </div>
         </div>
     );
 }
