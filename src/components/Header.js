@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars, faMicrophone, faBell, faMagnifyingGlass, faVideo, faUser} from "@fortawesome/free-solid-svg-icons";
 import youtubeLogo from "../images/youtube_logo.png";
 
-function Header(){
+function Header({setSearchInput}){
+
+    function getChannelName(){
+        var input = document.getElementById("channelSearchInput");
+        setSearchInput(input.value);
+    }
+
     return (
         <header>
             <div className="left-parts">
@@ -12,8 +18,8 @@ function Header(){
             </div>
             <div className="middle-parts">
                 <div className="search-box">
-                    <input type="text" id="channelSearchInput" name="channelSearchInput" style={{borderRight: 20}}></input>
-                    <button type="button"className="search-button">
+                    <input type="text" id="channelSearchInput" name="channelSearchInput"></input>
+                    <button onClick={getChannelName} type="button" className="search-button" id="searchButton">
                         <FontAwesomeIcon icon={faMagnifyingGlass} className="icons"/>
                     </button>
                 </div>
@@ -23,7 +29,9 @@ function Header(){
             <div className="right-parts">
                 <FontAwesomeIcon icon={faBell} className="icons"/>
                 <FontAwesomeIcon icon={faVideo} className="icons"/>
-                <FontAwesomeIcon icon={faUser} className="icons"/>
+                <div className="profile-photo">
+                    <FontAwesomeIcon icon={faUser} className="icons"/>
+                </div>
             </div>
         </header>
     );

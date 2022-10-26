@@ -1,36 +1,22 @@
-import axios from "axios";
 import React, {useEffect, useState} from "react";
-import { YOUTUBE_API_KEY } from "../API_KEY";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 import PageContents from "../components/PageContents";
+import citydata from "../components/citydata";
+// questions: 
+// round city data to the nearest thousands and put it in a map. 
+// {30,000: ["panama city", "other city", "other city"], 8,000,000: ["new york"]}
+// header is in one card, how do i take data from one card transfer it to the other section thatll need it
+// when press the search button, make it change page 
 
 function Home(){
-    // var gapi = require('gapi');
-    // gapi.server.setApiKey(YOUTUBE_API_KEY);
-    // gapi.server.load();
-    const youtubeChannelId = 'beyonce';
-    const URL = `https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=${youtubeChannelId}&key=${YOUTUBE_API_KEY}`;
-    const [youtubeChannelViewCount, setYoutubeChannelViewCount] = useState({});
-    const [youtubeData, setYoutubeData] = useState({});
-    // useEffect(() => {
-    //     axios
-    //         .get(URL)
-    //         .then( function(response) {
-    //             console.log(response);
-    //             setYoutubeData(response.data);
-    //         })
-    //         .catch(function(error){
-    //             console.warn(error);
-    //             setYoutubeData({});
-    //         })
-    // }, []);
+    const [searchInput, setSearchInput] = useState();
     return (
         <div>
-            <Header />
+            <Header setSearchInput={setSearchInput}/>
             <div className="page-info-wrapper">
                 <SideBar />
-                <PageContents />
+                <PageContents channelName={searchInput} />
             </div>
         </div>
     );

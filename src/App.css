@@ -11,6 +11,7 @@ header {
   height: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .left-parts, .right-parts {
   width: 12%;
@@ -32,25 +33,75 @@ header {
   display: flex;
 }
 .search-button {
-  height: 45px;
-  width: 45px;
   background-color: aqua;
 }
+.profile-photo {
+  background-color: pink;
+  border-radius: 50%;
+  flex-basis: fit-content;
+  padding: 10px;
+}
 input {
-  width:300px;
+  width:500px;
   height:35px;
 }
-.page-contents {
-  background-color: bisque;
+
+.page-contents-wrapper {
+  background-color: palegreen;
+  width: 100%;
+  border-right: 20px solid white;
 }
 .page-info-wrapper {
   display: flex;
 }
 .side-bar-menu-wrapper {
   width: 25%;
-  height: 100vh;
+  height: 100%;
   text-align: left;
   padding: 20px;
   flex-direction: column;
   display: flex;
+}
+.profile-pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: red;
+}
+.profile-name {
+  display: flex;
+  flex-direction: column;
+}
+.channel-username-topstuff-leftside {
+  display: flex;
+  flex-direction: row;
+}
+.channel-username-topstuff-rightside {
+  display: flex;
+  flex-direction: row;
+}
+.subscribe-button {
+  background-color: red;
+  padding: 20px;
+  height: 10px;
+}
+.subscribe-button p {
+  color: white;
+}
+.channel-username-topstuff {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.channel-username {
+  padding: 40px;
+  background-color: azure;
+
+}
+br {
+  color: black;
+}
+.notification-bell {
+  height: 70px;
+  width: 40px;
 }
