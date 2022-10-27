@@ -4,22 +4,22 @@
 }
 header {
   display: flex;
-  padding: 20px;
   justify-content: space-between;
+  padding: 20px;
 }
 .left-parts, .middle-parts, .right-parts {
-  height: 100%;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  height: 100%;
 }
 .left-parts, .right-parts {
-  width: 12%;
   justify-content: space-between;
+  width: 12%;
 }
 .middle-parts {
-  width: 100%;
   justify-content:center;
+  width: 100%;
 }
 .icons {
   height: 30px;
@@ -42,8 +42,8 @@ header {
   padding: 10px;
 }
 input {
-  width:500px;
   height:35px;
+  width:500px;
 }
 
 .page-contents-wrapper {
@@ -54,24 +54,24 @@ input {
   display: flex;
 }
 .side-bar-menu-wrapper {
-  width: 25%;
-  height: 100%;
-  text-align: left;
-  padding: 20px;
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  text-align: left;
+  width: 25%;
 }
 .profile-pic {
+  background-color: red;
+  border-radius: 50%;
   height: 100px;
   width: 100px;
-  border-radius: 50%;
-  background-color: red;
 }
 .profile-name {
-  display: flex;
-  flex-direction: column;
   align-items: start;
   border-left: 10px solid white;
+  display: flex;
+  flex-direction: column;
 }
 .profile-name h1 {
   line-height: 0px;
@@ -82,18 +82,18 @@ input {
   flex-direction: row;
 }
 .channel-username-topstuff-rightside {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   align-self: flex-start;
+  display: flex;
+  flex-direction: row;
 }
 .subscribe-button {
-  background-color: red;
-  padding: 20px;
   align-items: center;
-  height: 10px;
+  background-color: red;
   border-right: 15px solid white;
   display: flex;
+  height: 10px;
+  padding: 20px;
 }
 .subscribe-button p {
   color: white;
@@ -104,12 +104,12 @@ input {
   justify-content: space-between;
 }
 .channel-username {
-  padding: 40px 40px 0px;
   background-color: #f9f9f9;
-  height:250px;
   display: flex;
   flex-direction: column;
+  height:250px;
   justify-content: space-between;
+  padding: 40px 40px 0px;
 }
 br {
   color: black;
@@ -126,9 +126,9 @@ br {
 
 }
 .channel-header {
-  padding: 20px;
+  background-color: pink;
   height: 200px;
-  background-color: blueviolet;
+  padding: 20px;
 }
 .video-section {
   background-color: #f1f1f1;
@@ -142,8 +142,8 @@ br {
 .channel-username-bottomstuff {
   display: flex;
   flex-direction: row;
-  width: inherit;
   place-content: space-between;
+  width: inherit;
 }
 .right-channel-nav {
   display: flex;

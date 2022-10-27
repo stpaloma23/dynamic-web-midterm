@@ -1,23 +1,13 @@
 import citydata from "./citydata";
-
+// takees the youtube view count and returns a city that is closes in population 
 function GetCity({viewCount}) {
     var populationDictionary = {};
-
-    // var data = JSON.parse(citydata);
-    // console.log(data);
-    
-    // for (var i = 0; i<data.length; i++) {
-    
-    // }
     var roundedViewCount = roundNumber(viewCount);
     var rouundedViewCountAsInt = parseInt(roundedViewCount);
     citydata.map((selectedCity) => (
         populationDictionary[roundNumber(selectedCity.population)] = selectedCity.city+", "+selectedCity.state
     ));
-    console.log("inside get city"+viewCount);
-    console.log(roundedViewCount);
-    console.log(getNearestPopulation(56000, populationDictionary));
-    return viewCount;
+    return getNearestPopulation(rouundedViewCountAsInt, populationDictionary);
 }
 function roundNumber(population) {
     var lenOfString = population.length;
@@ -43,19 +33,21 @@ function roundNumber(population) {
 function getNearestPopulation(youtubeView, populationDict) {
     if (youtubeView > 8000000000) {
         var division = youtubeView/8000000000;
-        return "That's like everyone on Earth watched 1 video their channel " + division+ " times!"
+        return "That's as if everyone on Earth watched 1 video their channel " + Math.floor(division)+ " times!"
+    } else if(youtubeView > 38000000) {
+        var division = youtubeView/38000000;
+        return "That's as if everyone on Tokyo, Japan watched 1 video their channel more than " + Math.round(division * 100) / 100 + " times!"
     } else{
         var previousKey = populationDict[0];
         var previousValue = populationDict[previousKey];
         for(var key in populationDict) {
             if (youtubeView == key){
                 return "Thats as if almost everyone in "+ populationDict[key]+" watched a video!";
-            } else if (youtubeView > key){
-                previousKey = key;
-                previousValue = populationDict[key];
             } else if (youtubeView < key) {
                 return "Thats as if almost everyone in "+ previousValue + " watched a video!";
-            }
+            } 
+            previousKey = key;
+            previousValue = populationDict[key];
         }
     }
 }

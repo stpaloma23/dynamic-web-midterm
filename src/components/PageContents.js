@@ -3,7 +3,7 @@ import axios from "axios";
 import React, {useEffect, useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBell, faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
-import GetCity from "./datadict";
+import GetCity from "./GetCity";
 
 function PageContents({channelName = "beyonce"}) {
     const [youtubeData, setYoutubeData] = useState({});
@@ -15,7 +15,6 @@ function PageContents({channelName = "beyonce"}) {
         axios
             .get(URL)
             .then( function(response) {
-                console.log(response);
                 setViewCount(response.data.items[0].statistics.viewCount);
                 setSubscriberCount(response.data.items[0].statistics.subscriberCount);
 
@@ -29,8 +28,8 @@ function PageContents({channelName = "beyonce"}) {
     return(
         <div className="page-contents-wrapper">
             <div className="channel-header">
-                <h1>{channelName} has a total of {youtubeViewCount} views</h1>
-                <GetCity viewCount={youtubeViewCount}/>
+                <h1>{channelName} has a total of {parseInt(youtubeViewCount).toLocaleString()} views</h1>
+                <h2><GetCity viewCount={youtubeViewCount}/></h2>
             </div>
             <div className="channel-username">
                 <div className="channel-username-topstuff">
@@ -38,7 +37,7 @@ function PageContents({channelName = "beyonce"}) {
                         <div className="profile-pic"></div>
                         <div className="profile-name">
                             <h1>{channelName}</h1>
-                            <p>{subscriberCount} subscribers</p>
+                            <p>{parseInt(subscriberCount).toLocaleString()} subscribers</p>
                         </div>
                     </div>
                     <div className="channel-username-topstuff-rightside">
