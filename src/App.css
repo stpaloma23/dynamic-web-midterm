@@ -1,6 +1,8 @@
 .App {
-  text-align: center;
+  height: 100vh;
   overflow-y: hidden;
+  text-align: center;
+  width: 100vw;
 }
 header {
   display: flex;
