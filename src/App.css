@@ -49,7 +49,6 @@ input {
 .page-contents-wrapper {
   background-color: palegreen;
   width: 100%;
-  border-right: 20px solid white;
 }
 .page-info-wrapper {
   display: flex;
@@ -71,6 +70,12 @@ input {
 .profile-name {
   display: flex;
   flex-direction: column;
+  align-items: start;
+  border-left: 10px solid white;
+}
+.profile-name h1 {
+  line-height: 0px;
+
 }
 .channel-username-topstuff-leftside {
   display: flex;
@@ -79,11 +84,16 @@ input {
 .channel-username-topstuff-rightside {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
 }
 .subscribe-button {
   background-color: red;
   padding: 20px;
+  align-items: center;
   height: 10px;
+  border-right: 15px solid white;
+  display: flex;
 }
 .subscribe-button p {
   color: white;
@@ -94,9 +104,12 @@ input {
   justify-content: space-between;
 }
 .channel-username {
-  padding: 40px;
-  background-color: azure;
-
+  padding: 40px 40px 0px;
+  background-color: #f9f9f9;
+  height:250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 br {
   color: black;
@@ -104,4 +117,34 @@ br {
 .notification-bell {
   height: 70px;
   width: 40px;
+}
+.side-bar-menu-option:hover {
+  background-color: grey;
+}
+.side-bar-menu-option {
+  padding: 2.5px;
+
+}
+.channel-header {
+  padding: 20px;
+  height: 200px;
+  background-color: blueviolet;
+}
+.video-section {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+.left-channel-nav {
+  display: flex;
+  flex-basis: 75%;
+  justify-content: space-around;
+}
+.channel-username-bottomstuff {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  place-content: space-between;
+}
+.right-channel-nav {
+  display: flex;
 }

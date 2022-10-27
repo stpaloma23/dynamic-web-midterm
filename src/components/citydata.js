@@ -9,6 +9,15 @@ export default [
         "state": "Japan"
     },
     {
+        "city": "Earth", 
+        "growth_from_2000_to_2013": "4.8%", 
+        "latitude": 40.7127837, 
+        "longitude": -74.0059413, 
+        "population": "7800000000", 
+        "rank": "1", 
+        "state": "Japan"
+    },
+    {
         "city": "Delhi", 
         "growth_from_2000_to_2013": "4.8%", 
         "latitude": 40.7127837, 

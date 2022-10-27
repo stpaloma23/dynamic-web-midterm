@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 import PageContents from "../components/PageContents";
-import citydata from "../components/citydata";
 // questions: 
 // round city data to the nearest thousands and put it in a map. 
 // {30,000: ["panama city", "other city", "other city"], 8,000,000: ["new york"]}
