@@ -70,7 +70,7 @@ input {
   width: 100px;
 }
 .profile-name {
-  align-items: start;
+  align-items: flex-start;
   border-left: 10px solid white;
   display: flex;
   flex-direction: column;

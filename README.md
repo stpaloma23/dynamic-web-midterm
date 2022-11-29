@@ -21,5 +21,5 @@ requirments:
 2. datadict.js is where I am using the data form the json array to find a city population that closely matches the youtube views
 3. for user interaction, there is a search bar and a search button, where the user can enter a username of a channel they watch 
 4. both of the json data and youtube api data is displayed on the PageContents.js component. and all of this is displayed on the Home.js
-5. the ui changes based on the youtube channel views
+5. the ui changes based on the youtube channel views and the youtueb channel entered
 5. the styling is located in App.css
