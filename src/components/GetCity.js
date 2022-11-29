@@ -31,17 +31,18 @@ function roundNumber(population) {
     }
 }
 function getNearestPopulation(youtubeView, populationDict) {
+    var division; 
     if (youtubeView > 8000000000) {
-        var division = youtubeView/8000000000;
+        division = youtubeView/8000000000;
         return "That's as if everyone on Earth watched 1 video their channel " + Math.floor(division)+ " times!"
     } else if(youtubeView > 38000000) {
-        var division = youtubeView/38000000;
+        division = youtubeView/38000000;
         return "That's as if everyone on Tokyo, Japan watched 1 video their channel more than " + Math.round(division * 100) / 100 + " times!"
     } else{
         var previousKey = populationDict[0];
         var previousValue = populationDict[previousKey];
         for(var key in populationDict) {
-            if (youtubeView == key){
+            if (youtubeView === key){
                 return "Thats as if almost everyone in "+ populationDict[key]+" watched a video!";
             } else if (youtubeView < key) {
                 return "Thats as if almost everyone in "+ previousValue + " watched a video!";

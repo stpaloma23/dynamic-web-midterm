@@ -1,4 +1,4 @@
-export default [
+const cityData = [
     {
         "city": "Tokyo", 
         "growth_from_2000_to_2013": "4.8%", 
@@ -9072,3 +9072,4 @@ export default [
         "state": "Florida"
     }
 ]
+export default cityData;

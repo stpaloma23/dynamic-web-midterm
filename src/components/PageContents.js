@@ -6,7 +6,6 @@ import {faBell, faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import GetCity from "./GetCity";
 
 function PageContents({channelName = "beyonce"}) {
-    const [youtubeData, setYoutubeData] = useState({});
     const [youtubeViewCount, setViewCount] = useState(0);
     const [subscriberCount, setSubscriberCount] = useState(0);
 
@@ -21,7 +20,6 @@ function PageContents({channelName = "beyonce"}) {
             })
             .catch(function(error){
                 console.warn(error);
-                setYoutubeData({});
             })
     }, [channelName]);
 

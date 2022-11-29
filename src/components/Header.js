@@ -14,7 +14,7 @@ function Header({setSearchInput}){
         <header>
             <div className="left-parts">
                 <FontAwesomeIcon icon={faBars} className="icons"/>
-                <img src={youtubeLogo} className="youtube-logo"></img>
+                <img src={youtubeLogo} className="youtube-logo" alt="youtube logo"></img>
             </div>
             <div className="middle-parts">
                 <div className="search-box">
